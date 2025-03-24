@@ -1,34 +1,18 @@
 {
+  // ts config for es 2021
   "compilerOptions": {
-    // Environment setup & latest features
-    "outDir": "dist",
-    "rootDir": "src",
-    "declaration": true,
-    "lib": ["esnext"],
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleDetection": "force",
-    "jsx": "react-jsx",
-    "allowJs": true,
-    "esModuleInterop": true,
-
-    // Bundler mode
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "noEmit": true,
-
-    // Best practices
+    "target": "ES2019",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "lib": ["ES2019"],
+    "outDir": "./dist",
+    "alwaysStrict": true,
     "strict": true,
-    "skipLibCheck": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
-
-    // Some stricter flags (disabled by default)
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "declaration": true,
+    "noErrorTruncation": true,
+    "jsx": "react-jsx"
   },
-  "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }

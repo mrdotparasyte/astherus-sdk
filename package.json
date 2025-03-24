@@ -17,15 +17,27 @@
     "url": "https://github.com/mrdotparasyte/astherus-sdk"
   },
   "type": "module",
-  "scripts": {
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "typings": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/*.types": {
+      "import": "./dist/*.types.mjs",
+      "require": "./dist/*.types.js",
+      "types": "./dist/*.types.d.ts"
+    },
+    "./package.json": "./package.json"
   },
-  "main": "./dist/index.js",
   "files": [
-    "./dist/**/*",
-    "./src/**/*"
+    "dist"
   ],
   "devDependencies": {
-    "@types/bun": "latest",
+    "@types/node": "^22.13.12",
     "typescript": "^5.8.2"
   },
   "peerDependencies": {
@@ -34,7 +46,7 @@
   "dependencies": {
     "@pythnetwork/hermes-client": "^2.0.0",
     "dotenv": "^16.4.7",
-    "glob": "^11.0.1",
+    "tsup": "^8.4.0",
     "viem": "^2.23.14"
   }
 }
