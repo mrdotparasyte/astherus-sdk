@@ -1,6 +1,6 @@
 {
   "name": "@astherus/sdk",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -11,8 +11,13 @@
   },
   "type": "module",
   "scripts": {
-    "build": "bun build src/**/*.ts --outdir ./dist"
+    "build": "bun build --entrypoints ./src/index.ts  --outdir ./dist"
   },
+  "main": "./dist/index.js",
+  "files": [
+    "./dist/**/*",
+    "./src/**/*"
+  ],
   "devDependencies": {
     "@types/bun": "latest"
   },
