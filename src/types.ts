@@ -5,12 +5,12 @@ export type OrderInput = {
   pairBase: Address;
   isLong: boolean;
   tokenIn: Address;
-  amountIn: number;
-  qty: number;
-  price: number;
-  stopLoss: number;
-  takeProfit: number;
-  broker: number;
+  amountIn: bigint;
+  qty: bigint;
+  price: bigint;
+  stopLoss: bigint;
+  takeProfit: bigint;
+  broker: bigint;
 };
 
 export type MarketData = {
