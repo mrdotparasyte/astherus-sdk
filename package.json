@@ -1,6 +1,6 @@
 {
   "name": "@astherus/sdk",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "license": "MIT",
   "description": "Astherus SDK",
   "keywords": [
@@ -9,6 +9,9 @@
     "perp"
   ],
   "private": false,
+  "scripts": {
+    "build": "npx tsup --format esm,cjs,iife --dts"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -16,7 +19,7 @@
     "name": "mrdotparasyte",
     "url": "https://github.com/mrdotparasyte/astherus-sdk"
   },
-  "type": "module",
+  "type": "commonjs",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "typings": "dist/index.d.ts",
@@ -45,6 +48,7 @@
   },
   "dependencies": {
     "@pythnetwork/hermes-client": "^2.0.0",
+    "axios": "^1.8.4",
     "dotenv": "^16.4.7",
     "tsup": "^8.4.0",
     "viem": "^2.23.14"
