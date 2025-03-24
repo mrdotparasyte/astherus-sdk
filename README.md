@@ -1,5 +1,8 @@
 # Astherus sdk
 
+![https://npm.im/@astherus/sdk](https://img.shields.io/npm/v/@astherus/sdk)
+![](https://snyk.io/test/github/mrdotparasyte/astherus-sdk/badge.svg)
+
 ### Install
 
 ```shell
