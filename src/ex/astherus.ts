@@ -135,7 +135,7 @@ export class Astherus {
         ],
       ],
       account: this.account,
-      value: useNative ? BigInt(input.amountIn) : 0n,
+      value: useNative ? BigInt(input.amountIn) : BigInt(0),
     });
     return this.walletClient.writeContract(request);
   }
@@ -181,7 +181,7 @@ export class Astherus {
         ],
       ],
       account: this.account,
-      value: useNative ? BigInt(input.amountIn) : 0n,
+      value: useNative ? BigInt(input.amountIn) : BigInt(0),
     });
     return this.walletClient.writeContract(request);
   }
