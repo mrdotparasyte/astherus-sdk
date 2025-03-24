@@ -1,15 +1,11 @@
-# astherus.finance
+# Astherus sdk
 
-To install dependencies:
+### Installation
 
-```bash
-bun install
+```shell
+yarn add @astherus/sdk
+
+// or
+
+npm install @astherus/sdk
 ```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.2.5. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
