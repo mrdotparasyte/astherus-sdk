@@ -17,14 +17,17 @@ import { bsc } from "viem/chains";
 import { abi } from "../abi/astherus";
 import { HermesClient } from "@pythnetwork/hermes-client";
 import type { OrderInput } from "../types";
+import { Ex, ExConfig } from "./ex";
 
-export class Astherus {
+export class Astherus extends Ex {
   readonly version = "v2";
   readonly contract = "0x1b6F2d3844C6ae7D56ceb3C3643b9060ba28FEb0";
   readonly walletClient: WalletClient;
   readonly publicClient: PublicClient;
   readonly account: Account;
-  constructor(secretKey: string) {
+  constructor(exConfig: ExConfig) {
+    super(exConfig);
+    const { secretKey } = this.exConfig;
     this.account = privateKeyToAccount(secretKey as Hex);
     this.walletClient = createWalletClient({
       account: this.account,
