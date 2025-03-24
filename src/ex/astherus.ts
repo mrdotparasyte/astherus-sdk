@@ -1,5 +1,12 @@
-import type { Account, Address, Hash, PublicClient, WalletClient } from "viem";
-import { generatePrivateKey, privateKeyToAccount } from "viem/accounts";
+import type {
+  Account,
+  Address,
+  Hash,
+  Hex,
+  PublicClient,
+  WalletClient,
+} from "viem";
+import { privateKeyToAccount } from "viem/accounts";
 import {
   createPublicClient,
   createWalletClient,
@@ -17,9 +24,8 @@ export class Astherus {
   readonly walletClient: WalletClient;
   readonly publicClient: PublicClient;
   readonly account: Account;
-  constructor() {
-    const privateKey = generatePrivateKey();
-    this.account = privateKeyToAccount(privateKey);
+  constructor(secretKey: string) {
+    this.account = privateKeyToAccount(secretKey as Hex);
     this.walletClient = createWalletClient({
       account: this.account,
       chain: bsc,

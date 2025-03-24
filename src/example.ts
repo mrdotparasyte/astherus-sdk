@@ -4,7 +4,8 @@ import { ASTHERUS_SYMBOLS } from "./constants";
 configDotenv();
 
 async function main() {
-  const astherus = new Astherus();
+  const privateKey = process.env.PRIVATE_KEY;
+  const astherus = new Astherus(privateKey!.toString());
   const marketData = await astherus.getMarketData(
     "0xD89aE81e55b1Bd46591CB5555209fdF8fFb43b76"
   );
