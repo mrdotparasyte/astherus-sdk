@@ -33,7 +33,7 @@ const btcPrice = await astherus.getPrice(
 );
 ```
 
-#### Create Order
+#### Create Market Order
 
 ```typescript
 const orderInput = {
@@ -50,7 +50,7 @@ const orderInput = {
 const orderhash = await astherus.createMarketOrder(orderInput);
 ```
 
-#### Close Order
+#### Close Market Order
 
 ```typescript
 const orderhash =
